@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Gabriel Goldstein</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
@@ -17,7 +17,15 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/list.css">
 
-
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
 
 </head>
 
@@ -40,7 +48,7 @@
                 <br/> To find out more about me. Click down below &nbsp;<i class="fa fa-arrow-down fa-1x"></i>
             </p>
 
-            <a href="#" class="btn">Click Me</a>
+            <a href='#About' class="btn scroll">Click Me</a>
         </div>
 
     </header>
@@ -48,7 +56,7 @@
 
 
     <!-- About Me Section BEGIN -->
-    <section class="section section-a">
+    <section id='About' class="section section-a">
         <div class="container">
 
             <h1>About Me</h1>
@@ -166,9 +174,6 @@
         <div class="container">
 
             <h1>Skills</h1>
-            <p>
-                This is going to be a bunch of skills in like cards
-            </p>
 
             <div class='ui three centered raised cards'>
 
@@ -291,10 +296,7 @@
     <section class="section section-a">
         <div class="container">
 
-            <h1>Experiences</h1>
-            <p>
-                Below is a list of my past work experiences
-            </p>
+            <h1>Work Experiences</h1>
 
             <div class='ui two centered raised cards'>
 
@@ -420,20 +422,38 @@
         <div class="container">
 
             <h1>Contact Me</h1>
-            <p>
-                A form to contact me
-            </p>
 
-            <ul>
+            <div class='ui horizontal list'>
+                <div class='item'>
+                    <a href='mailto:gabriel753@live.com'><i class='fa fa-envelope fa-2x'></i></a>
+                    <br/>
+                    <label>Email</label>
+                </div>
+                <div class='item'>
+                    <a href="https://www.linkedin.com/in/gabrielgoldstein/"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    <br/>
+                    <label>Linkedin</label>
+                </div>
+                <div class='item'>
+                    <a href="https://github.com/GabrielGoldstein"><i class="fa fa-github-square fa-2x"></i></a>
+                    <br/>
+                    <label>Github</label>
+                </div>
+            </div>
 
-                <li><a href="https://www.linkedin.com/in/gabrielgoldstein/"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
-                <li><a href="https://github.com/GabrielGoldstein"><i class="fa fa-github-square fa-2x"></i></a></li>
+            <br/>
+            <br/>
 
-                <footer>
-                    &copy; No Copyright.
-                </footer>
+            <footer>
+                &copy; No Copyright.
+            </footer>
 
-            </ul>
+            <br/>
+            <br/>
+
+
+            
+            
 
         </div>
     </section>
