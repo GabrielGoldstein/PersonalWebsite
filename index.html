@@ -33,7 +33,14 @@
 				event.preventDefault();
 				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
 			});
+
+            if (navigator.userAgent.match(/Mobile/)) {
+                //document.getElementByID('headerDescription').innerHTML = '';
+                $('#headerDescription').innerHTML = '';
+            };        
 		});
+
+        
 	</script>
 
 </head>
@@ -52,7 +59,7 @@
 
         <div class="header-content">
             <h1 class="animated infinite bounce">Welcome to my website!!<i class="fa fa-hand-peace-o fa-1x"></i></h1>
-            <p class="animated swing">
+            <p id='headerDescription' class="animated swing">
                 Hi! I'm Gabriel Goldstein &amp; I'm a Software Developer trying to learn as much as i can to then pass that knowledge on.
                 <br/> To find out more about me. Click down below &nbsp;<i class="fa fa-arrow-down fa-1x"></i>
             </p>
