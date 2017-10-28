@@ -112,3 +112,11 @@ a {
         padding: 0 3rem;
     }
 }
+
+p.mobile {display: none;}
+@media(max-width:640px){
+    p.mobile { display:block; }
+    p.desktop { display:none; }
+    .title { font-size:50px !important; }
+}
+

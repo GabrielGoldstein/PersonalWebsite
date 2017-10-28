@@ -32,12 +32,7 @@
 			$(".scroll").click(function (event) {
 				event.preventDefault();
 				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-			});
-
-            if (navigator.userAgent.match(/Mobile/)) {
-                //document.getElementByID('headerDescription').innerHTML = '';
-                $('#headerDescription').innerHTML = '';
-            };        
+			});                  
 		});
 
         
@@ -58,10 +53,13 @@
         <div class="header-overlay"></div>
 
         <div class="header-content">
-            <h1 class="animated infinite bounce">Welcome to my website!!<i class="fa fa-hand-peace-o fa-1x"></i></h1>
-            <p id='headerDescription' class="animated swing">
+            <h1 class="animated infinite bounce title">Welcome to my website!!<i class="fa fa-hand-peace-o fa-1x"></i></h1>
+            <p class="desktop animated swing">
                 Hi! I'm Gabriel Goldstein &amp; I'm a Software Developer trying to learn as much as i can to then pass that knowledge on.
                 <br/> To find out more about me. Click down below &nbsp;<i class="fa fa-arrow-down fa-1x"></i>
+            </p>
+            <p class='mobile animated swing'>
+                Hi! I'm Gabriel Goldstein. This is my website.
             </p>
 
             <a href='#About' class="btn scroll">Click Me</a>
