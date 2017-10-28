@@ -114,7 +114,7 @@ a {
 }
 
 p.mobile {display: none;}
-@media(max-width:640px){
+@media(max-width:680px){
     p.mobile { display:block; }
     p.desktop { display:none; }
     .title { font-size:50px !important; }
