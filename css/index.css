@@ -72,7 +72,6 @@ img {
     font-size: 22px;
     line-height: 150%;
     display: block;
-    padding-bottom: 2rem;
 }
 
 .btn {
@@ -123,10 +122,26 @@ a {
     .container {
         padding: 0 3rem;
     }
+
+    .header-content img {
+        width: 75%;
+    }
+
+    .header-content h1{
+        margin: 0;
+    }
 }
 
 p.mobile {display: none;}
 @media(max-width:680px){
+    .header-content img {
+        width: 50%;
+    }
+
+    .header-content h1 {
+        margin: 0;
+    }
+
     p.mobile { display:block; }
     p.desktop { display:none; }
     .title { font-size:50px !important; }
