@@ -14,16 +14,19 @@
     <link rel="icon" href="images/favicon.ico" />
 
     <!-- Font-Awesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- AnimateCSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <!-- Semantic UI -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/image.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/list.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/image.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/list.css">
 
     <!-- Local CSS/JS -->
     <link href="css/index.css" rel="stylesheet" type="text/css" />
@@ -34,7 +37,13 @@
                 event.preventDefault();
                 $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
             });
+
+            //Slows down the video since its a little fast by default
+            var vid = document.getElementById("backgroundVideo");
+            vid.playbackRate = 0.7; 
+
         });
+        
     </script>
 
 </head>
@@ -43,20 +52,30 @@
 <body>
 
     <header class="v-header container">
+ 
+        <!--    Different background videos
+            Angle Green on Black: https://cdn.videvo.net/videvo_files/converted/2015_10/videos/Hack_code_greenonblack_01_Videvo.mov71960.mp4
+            Close up White on Black: https://cdn.videvo.net/videvo_files/converted/2015_10/videos/Hacker_code_whiteblack_01_Videvo.mov87866.mp4
+        -->
 
         <div class="fullscreen-video-wrap">
-            <video src="https://production.cdmycdn.com/assets/marketing-pages/intensives/bws/coding-scenes-9a2031e8142b40bdb5d936d5eef33dfa.mp4"
-                autoplay="true" loop="true"></video>
+            <video id="backgroundVideo" autoplay muted loop>
+                <source
+                    src="https://cdn.videvo.net/videvo_files/converted/2015_10/videos/Hack_code_greenonblack_01_Videvo.mov71960.mp4"
+                    type="video/mp4">
+            </video>
         </div>
 
         <div class="header-overlay"></div>
 
         <div class="header-content">
             <img class='ui medium centered circular image' src='images/favicon.ico'>
-            <h1 class="animated infinite bounce title">Welcome to my website!!<i class="fa fa-hand-peace-o fa-1x"></i></h1>
+            <h1 class="animated infinite bounce title">Welcome to my website!!<i class="fa fa-hand-peace-o fa-1x"></i>
+            </h1>
             <p class="desktop animated swing">
-                Hi! I'm Gabriel Goldstein &amp; I'm a Software Developer trying to learn as much as i can to then pass that knowledge on.
-                <br/> To find out more about me. Click down below &nbsp;<i class="fa fa-arrow-down fa-1x"></i>
+                Hi! I'm Gabriel Goldstein &amp; I'm a Software Developer trying to learn as much as i can to then pass
+                that knowledge on.
+                <br /> To find out more about me. Click down below &nbsp;<i class="fa fa-arrow-down fa-1x"></i>
             </p>
             <p class='mobile animated swing'>
                 Hi! I'm Gabriel Goldstein. This is my website.
@@ -74,13 +93,17 @@
         <div class="container">
 
             <h1>About Me</h1>
-            <p style = 'text-align:left; font-weight:bold;' >
-                Hi! My name is Gabriel Goldstein. 
-                A highly energetic and motivated Software Developer with skills in C#, Unity3D, ASP.NET, JavaScript, and much more.
-                Looking for a challenging and engaging work environment to gain experience in the programming field. 
-                With 4+ years of leadership experience stemming from military experience, various college research projects, and in a commercial enviornment. 
-                Graduated with a Bachelor's of Science focused in Computer Science with a Specialization in Game Programming from the College of Staten Island. 
-                I enjoy challenging myself by learning new languages as well as new techniques for effectively completing a task and adaptive management styles that will better benefit my team.
+            <p style='text-align:left; font-weight:bold;'>
+                Hi! My name is Gabriel Goldstein.
+                A highly energetic and motivated Software Developer with skills in C#, Unity3D, ASP.NET, JavaScript, and
+                much more.
+                Looking for a challenging and engaging work environment to gain experience in the programming field.
+                With 4+ years of leadership experience stemming from military experience, various college research
+                projects, and in a commercial enviornment.
+                Graduated with a Bachelor's of Science focused in Computer Science with a Specialization in Game
+                Programming from the College of Staten Island.
+                I enjoy challenging myself by learning new languages as well as new techniques for effectively
+                completing a task and adaptive management styles that will better benefit my team.
             </p>
 
             <h3>Education</h3>
@@ -152,7 +175,8 @@
                                     President/founder of the Game Development Club
                                 </div>
                                 <div class='item'>
-                                    Created a fun and social environment for people with an interest in creating games and learning game development and can
+                                    Created a fun and social environment for people with an interest in creating games
+                                    and learning game development and can
                                     meet and work together on projects
                                 </div>
                             </div>
@@ -173,7 +197,8 @@
                         <div class='description'>
                             <div class='ui left aligned bulleted list'>
                                 <div class='item'>
-                                    Assisted a professor in teaching game development concepts to college students using the Unity engine in the Serious Game
+                                    Assisted a professor in teaching game development concepts to college students using
+                                    the Unity engine in the Serious Game
                                     Development class
                                 </div>
                             </div>
@@ -332,31 +357,37 @@
                         <div class='description'>
                             <div class='ui left aligned bulleted list'>
                                 <div class='item'>
-                                    Lead a team of 8 developers in the development of a web based CRM software using ASP.NET, C#, SQL Server, JavaScript, and other frameworks/libraries.
+                                    Lead a team of 8 developers in the development of a web based CRM software using
+                                    ASP.NET, C#, SQL Server, JavaScript, and other frameworks/libraries.
                                 </div>
                                 <div class='item'>
                                     Used Bootstrap and Semantic UI to create sleek and modern user interfaces.
                                 </div>
                                 <div class='item'>
-                                    Wrote stored procedures, created tables, and modified tables in Microsoft SQL Server using SQL server Management Studio.
+                                    Wrote stored procedures, created tables, and modified tables in Microsoft SQL Server
+                                    using SQL server Management Studio.
                                 </div>
                                 <div class='item'>
-                                    Worked with customers to create user requirements.    
+                                    Worked with customers to create user requirements.
                                 </div>
                                 <div class='item'>
-                                    Worked as/with designers communicating user requirements to create a sleek and modern UI design.
+                                    Worked as/with designers communicating user requirements to create a sleek and
+                                    modern UI design.
                                 </div>
                                 <div class='item'>
-                                    Worked as/with database architects to develop detailed data models for logical and conceptual database designs as well as implement those designs.
+                                    Worked as/with database architects to develop detailed data models for logical and
+                                    conceptual database designs as well as implement those designs.
                                 </div>
                                 <div class='item'>
                                     Read through user feedback to determine improvements for the software.
                                 </div>
                                 <div class='item'>
-                                    Used JavaScript to handle client side features allowing to reduce the load on back end features.
+                                    Used JavaScript to handle client side features allowing to reduce the load on back
+                                    end features.
                                 </div>
                                 <div class='item'>
-                                    Worked with Company Owner, Project Manager, and Customers to create timelines, designing sprints, and delegating tasks to member of the team using JIRA.
+                                    Worked with Company Owner, Project Manager, and Customers to create timelines,
+                                    designing sprints, and delegating tasks to member of the team using JIRA.
                                 </div>
                             </div>
                         </div>
@@ -364,7 +395,7 @@
                 </div>
                 <!-- Online Computers Experience END -->
 
-                <br/>
+                <br />
 
                 <!-- Research Project Experience BEGIN -->
                 <div class='ui fluid card'>
@@ -374,17 +405,20 @@
                             <span class='right floated'>8/2015 - 11/2016</span>
                             <span class='left floated'>College of Staten Island</span>
                         </div>
-                        
+
                         <div class='description'>
                             <div class='ui left aligned bulleted list'>
                                 <div class='item'>
-                                    Lead a team of 5+ developers in creating a game in Unity using C# and Microsoft Kinect V2 to help autistic children build teamwork with other autistic children and to research a game's ability to stimulate learning and emotional recognition
+                                    Lead a team of 5+ developers in creating a game in Unity using C# and Microsoft
+                                    Kinect V2 to help autistic children build teamwork with other autistic children and
+                                    to research a game's ability to stimulate learning and emotional recognition
                                 </div>
                                 <div class='item'>
-                                    Conducted detailed user testing using the results and user feedback to design and implement improvements to the user experience.
+                                    Conducted detailed user testing using the results and user feedback to design and
+                                    implement improvements to the user experience.
                                 </div>
                                 <div class='item'>
-                                    Demoed the game at several academic conferences such as: 
+                                    Demoed the game at several academic conferences such as:
                                     "SRCD Technology and Media in Children's Development Conference"
                                     &
                                     "CUNY Games Festival 2016"
@@ -397,7 +431,7 @@
                 </div>
                 <!-- Research Project Experience END -->
 
-                <br/>
+                <br />
 
                 <!-- Adjunct Lab Tech Experience BEGIN -->
                 <div class='ui fluid card'>
@@ -410,7 +444,8 @@
                         <div class='description'>
                             <div class='ui left aligned bulleted list'>
                                 <div class='item'>
-                                    Assisted college studnets with setting up experiments and other learning exercies for the CSC 117 Computer Technology Lab
+                                    Assisted college studnets with setting up experiments and other learning exercies
+                                    for the CSC 117 Computer Technology Lab
                                     and CSC 119 Computer Technology Concepts class
                                 </div>
                                 <div class='item'>
@@ -420,7 +455,8 @@
                                     Manages equipment and materials inventories
                                 </div>
                                 <div class='item'>
-                                    Peform other activates such as troubleshooting computer problems, fixed printers and assisted other classes at the facility.
+                                    Peform other activates such as troubleshooting computer problems, fixed printers and
+                                    assisted other classes at the facility.
                                 </div>
                             </div>
                         </div>
@@ -428,7 +464,7 @@
                 </div>
                 <!-- Adjunct Lab Tech Experience END -->
 
-                <br/>
+                <br />
 
                 <!-- NYC Park Internship Tech Experience BEGIN -->
                 <div class='ui fluid card'>
@@ -441,11 +477,13 @@
                         <div class='description'>
                             <div class='ui left aligned bulleted list'>
                                 <div class='item'>
-                                    Taught high school students the development and creation of games and guided them through building their own game using the
+                                    Taught high school students the development and creation of games and guided them
+                                    through building their own game using the
                                     RPG Maker engine
                                 </div>
                                 <div class='item'>
-                                    Performed other lab activates such as maintaining an open lab helping people with computer problems, fixed printers and assisted
+                                    Performed other lab activates such as maintaining an open lab helping people with
+                                    computer problems, fixed printers and assisted
                                     other classes at the facility.
                                 </div>
                             </div>
@@ -454,7 +492,7 @@
                 </div>
                 <!-- NYC Park Internship Tech Experience END -->
 
-                <br/>
+                <br />
 
             </div>
 
@@ -478,15 +516,16 @@
                         <img src='images/CountDownLandingPage_Thumbnail.PNG'>
                     </div>
                     <div class='content'>
-                        <a href='https://gabrielgoldstein.github.io/CountDownLandingPage/' class='header'>Countdown Landing Page</a>
+                        <a href='https://gabrielgoldstein.github.io/CountDownLandingPage/' class='header'>Countdown
+                            Landing Page</a>
                         <div class='description'>
-                            Created a placeholder for a website doman. 
+                            Created a placeholder for a website doman.
                             Allowing for customers to see the website and when to expect it to launch.
                             Can be easily repurposed for other projects.
                         </div>
                     </div>
 
-                </div>                
+                </div>
                 <!-- Count Down Landing Page END -->
 
             </div>
@@ -506,30 +545,31 @@
             <div class='ui horizontal list'>
                 <div class='item'>
                     <a href='mailto:gabriel753@live.com'><i class='fa fa-envelope fa-2x'></i></a>
-                    <br/>
+                    <br />
                     <label>Email</label>
                 </div>
                 <div class='item'>
-                    <a href="https://www.linkedin.com/in/gabrielgoldstein/"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                    <br/>
+                    <a href="https://www.linkedin.com/in/gabrielgoldstein/"><i
+                            class="fa fa-linkedin-square fa-2x"></i></a>
+                    <br />
                     <label>Linkedin</label>
                 </div>
                 <div class='item'>
                     <a href="https://github.com/GabrielGoldstein"><i class="fa fa-github-square fa-2x"></i></a>
-                    <br/>
+                    <br />
                     <label>Github</label>
                 </div>
             </div>
 
-            <br/>
-            <br/>
+            <br />
+            <br />
 
             <footer>
                 &copy; No Copyright.
             </footer>
 
-            <br/>
-            <br/>
+            <br />
+            <br />
 
 
 
@@ -593,23 +633,25 @@
 </div>
 -->
 
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-    var sc_project = 11484586;
-    var sc_invisible = 1;
-    var sc_security = "fa4cf817";
-    var scJsHost = (("https:" == document.location.protocol) ?
-        "https://secure." : "http://www.");
-    document.write("<sc" + "ript type='text/javascript' src='" +
-        scJsHost +
-        "statcounter.com/counter/counter.js'></" + "script>");
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11484586;
+        var sc_invisible = 1;
+        var sc_security = "fa4cf817";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
 
-</script>
-<noscript>
-    <div class="statcounter">
-        <a title="Web Analytics Made Easy - StatCounter" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/11484586/0/fa4cf817/1/" alt="Web Analytics Made Easy - StatCounter"></a></div>
-</noscript>
-<!-- End of StatCounter Code for Default Guide -->
+    </script>
+    <noscript>
+        <div class="statcounter">
+            <a title="Web Analytics Made Easy - StatCounter" href="http://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="//c.statcounter.com/11484586/0/fa4cf817/1/"
+                    alt="Web Analytics Made Easy - StatCounter"></a></div>
+    </noscript>
+    <!-- End of StatCounter Code for Default Guide -->
 
 
 </body>
