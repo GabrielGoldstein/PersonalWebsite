@@ -6,19 +6,123 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Box-sizing border-box */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+/* Global CSS */
+body{
+    background-color:#f1f1f1!important;
+    overflow: unset;
+}
+h2 i{
+    padding-right: 5px;
+    color: green;
+}
 
-/* Some default styles to make each box visible */
+/* Page container */
+.container {
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: flex-start; 
+    align-self: auto;
+  
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/* Third Layouts */
+.flex-onethird{ 
+    display: flex;
+    flex-direction: column;
+    margin: 10px; 
+    min-width: calc(33.3333333% - 20px);
+    max-width: calc(33.3333333% - 20px);
+}
+.flex-twothird{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    margin: 10px 5px 5px 5px; 
+    min-width: calc(66.6666666% - 10px);
+    max-width: calc(66.6666666% - 10px);
+}
+.flex-page{
+    display: flex;
+    margin: 10px;
+}
+
+
+/* Generic Card Classes */
+.card{
+    color:black;
+    background-color: #fff!important; 
+    margin: 5px;
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
+        0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.card-header{
+    color: #757575!important;
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.card-content{
+
+}
+
+
+/* Side Nav specific Classes*/
+.side-nav-card{
+    background:lightpink; 
+    padding: 0 16px 16px 16px;
+}
+.quick-link-list li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* Card layout classes */
+.single-card{
+    background:lightpink;
+}
+.two-cards{
+    background:aqua;
+    min-width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+}
+.three-cards{
+    background:lightblue;
+    min-width: calc(33.333333% - 10px);
+    max-width: calc(33.333333% - 10px);
+}
+.four-cards{
+    background: lightseagreen;
+    min-width: calc(25% - 10px);
+    max-width: calc(25% - 10px);
+}
+
+
+
+/* Card Placeholder for placement testing */
+.test{
+    background: lightblue!important;
+    font-size: 75px;
+    text-align: center;
+}
+
+
+
+/* WesBos css stuff */
 .box {
   color:white;
   font-size: 100px;
   text-align: center;
   text-shadow:4px 4px 0 rgba(0,0,0,0.1);
-  padding:10px;
-  width: calc(33.333333% - 20px);
+  padding:10px; 
   margin: 10px;
-}
-
-/* Colours for each box */
+} 
 .box1 { 
     background:#1abc9c;
     flex-basis: 60%
@@ -52,18 +156,4 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
     background:#16a085;
 }
 
-
-/* We start writing out flexbox here. The above is just page setup */
-.container {
-  display:flex;
-  flex-wrap: wrap;
-  border:10px solid goldenrod;
-  height:100vh;
-  justify-content: center;
-  align-items: flex-start; 
-  align-self: auto;
-
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto; 
-} 
+ 
